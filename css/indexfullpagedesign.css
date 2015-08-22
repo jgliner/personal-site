@@ -1,0 +1,391 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background:
+  url(../images/pattern.png),
+  url(../images/wave2.jpg) no-repeat center/cover fixed;
+  background-color: #808080;
+  overflow-x: hidden;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+/*-----Load-----*/
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+
+  border: 3px solid #2F4C6F;
+  z-index: 1500;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid #dddddd;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid #2F4C6F;
+}
+
+#loader {
+  border: 3px solid transparent;
+  border-top-color: #2F4C6F;
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+#loader:before {
+  border: 3px solid transparent;
+  border-top-color: #dddddd;
+  border-radius: 50%;
+  -webkit-animation: spin 3.5s linear infinite;
+  animation: spin 3.5s linear infinite;
+}
+#loader:after {
+  border: 3px solid transparent;
+  border-top-color: #2F4C6F;
+  border-radius: 50%;
+  -webkit-animation: spin 5.5s linear infinite;
+  animation: spin 5.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #808080;
+    z-index: 1000;
+}
+
+.loaded #loader {
+    opacity: 0;
+}
+
+.loaded #loader-wrapper {
+    opacity: 0;
+    -webkit-transition: all 0.7s ease-out; 
+    transition: all 0.7s ease-out;
+    -webkit-transition-delay: 1s;
+    transition-delay: 0.7s;
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.7s ease-out; 
+    transition: all 0.7s ease-out;
+}
+
+/*-----Main-----*/
+
+#triangleoverlay {
+  position: relative;
+  z-index: 100;
+}
+
+#logo {
+  margin-left: 110px;
+  margin-top: 20px;
+}
+
+#title {
+  margin-top: 320px !important;
+  margin-left: 45%;
+  height: 60%;
+  position: absolute;
+}
+
+/*-----Links-----*/
+
+#triangleoverlay ul {
+  list-style-type: none;
+  position: absolute;
+  top: 440%;
+  margin-left: -60px;
+}
+
+.bmenu li:nth-child(4) p {
+  padding-left: 625px;
+}
+
+.bmenu li:nth-child(3) p {
+  padding-left: 530px;
+}
+
+.bmenu li:nth-child(2) p {
+  padding-left: 415px;
+}
+
+.bmenu li:nth-child(1) p {
+  padding-left: 345px;
+}
+
+.bmenu li a p{
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px #000000;
+  color: #ffffff;
+  padding: 35px;
+  margin: 2px;
+  margin-bottom: 55px;
+  padding-right: 200px;
+  background: rgba(27,43,64,0.7);
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.bmenu:hover li a p{
+  text-shadow: 0px 0px 2px #ffffff;
+  color: transparent;
+  background: rgba(27,43,64,0.2);
+}
+
+.bmenu li a:hover p{
+  background: rgba(27,43,64,1.0);
+  text-shadow: 0px 0px 0px #ffffff;
+}
+
+.bmenu:hover li div input{
+  -webkit-filter: blur(1px);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.bmenu li a:hover div input{
+  -webkit-filter: blur(0px);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.bmenu li a:hover div input:hover{
+  -webkit-filter: blur(0px) !important;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.bmenu li a div:hover input{
+  -webkit-filter: blur(1px) !important;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+input {
+  border: none; 
+  outline: none;
+  box-shadow: none;
+}
+
+
+input:nth-child(4) {
+  -webkit-transition: all 0.2s linear !important;
+  -moz-transition: all 0.2s linear !important;
+  -o-transition: all 0.2s linear !important;
+  -ms-transition: all 0.2s linear !important;
+  transition: all 0.2s linear !important;
+}
+
+input:nth-child(3) {
+  -webkit-transition: all 0.3s linear !important;
+  -moz-transition: all 0.3s linear !important;
+  -o-transition: all 0.3s linear !important;
+  -ms-transition: all 0.3s linear !important;
+  transition: all 0.3s linear !important;
+}
+
+input:nth-child(2) {
+  -webkit-transition: all 0.4s linear !important;
+  -moz-transition: all 0.4s linear !important;
+  -o-transition: all 0.4s linear !important;
+  -ms-transition: all 0.4s linear !important;
+  transition: all 0.4s linear !important;
+}
+
+input:nth-child(1) {
+  -webkit-transition: all 0.5s linear !important;
+  -moz-transition: all 0.5s linear !important;
+  -o-transition: all 0.5s linear !important;
+  -ms-transition: all 0.5s linear !important;
+  transition: all 0.5s linear !important;
+}
+
+input:active {
+  border: none; 
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(136, 136, 136, 0.7);
+}
+
+/*-----RESPONSIVE-----*/
+
+@media (max-width: 1465px) {
+
+  #title {
+    margin-top: 30% !important;
+    margin-left: 55%;
+    height: 40%;
+  }
+
+}
+
+@media (max-width: 1150px) {
+
+  #title {
+    margin-top: 0% !important;
+    margin-left: -3%;
+    height: 35%;
+  }
+
+  #logo {
+    margin-left: 75%;
+    margin-top: 10%;
+  }
+
+}
+
+@media (max-width: 920px) {
+
+  #logo {
+    margin-left: 70%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /*#triangleoverlay ul {
+  list-style-type: none;
+  position: absolute;
+  top: 440%;
+  }*/
+
+  #title {
+    margin-top: auto;
+    margin-left: auto;
+    position: static;
+    height: 300px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mmenu {
+    margin-top: 150px;
+  }
+
+  .mmenu li {
+    position: static;
+    width: 125vw;
+    
+  }
+
+  .mmenu li a p{
+    position: relative;
+    border-radius: 25px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px #000000;
+    color: #ffffff;
+    padding: 35px;
+    margin-bottom: 55px;
+    background: rgba(27,43,64,0.7);
+    letter-spacing: 1px;
+  }
+
+  .mmenu:hover li a p{
+    text-shadow: 0px 0px 2px #ffffff;
+    color: transparent;
+    background: rgba(27,43,64,0.2);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .mmenu li a:hover p{
+    background: rgba(27,43,64,1.0);
+    text-shadow: 0px 0px 0px #ffffff;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
+}
+
+@media (min-height:1017px) {
+
+  body {
+    overflow: hidden;
+  }
+
+}

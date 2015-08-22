@@ -193,7 +193,7 @@ button:active {
   top: 0;
   right: 0;
   margin-top: 0px;
-  width: 35%;
+  width: 60%;
   height: 100vh;
   max-height: 100vh !important;
   -webkit-transition: all ease .3s !important;
@@ -203,7 +203,7 @@ button:active {
 }
 
 .collapsing {
-  right: -40%;
+  right: -60%;
 }
 
 .in>li, .collapsing>li {

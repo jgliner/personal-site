@@ -269,13 +269,12 @@ button:active {
 
 /*--------First Section-------*/
 
-
-#resume {
+#resume img {
+  max-height: 200px;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 }
 
 /*--------Second Section-------*/
@@ -486,6 +485,80 @@ div>h3 {
 
 }
 
+@media (max-width: 768px) {
+
+  /*top*/
+
+  #second {
+    padding-top: 70%;
+  }
+
+  h3 {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /*content*/
+
+  .well h3 {
+    text-decoration: underline;
+    margin-bottom: 30px;
+  }
+
+  #res img {
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+  }
+
+  #res .well span:not(.skillstars):not(.starkey) {
+    text-align: center !important;
+    float: none !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    display: block;
+  }
+
+  #res .well ul {
+    font-size: 15px !important;
+    -webkit-padding-start: 15px;
+  }
+
+  #res .well ul {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    display: block;
+  }
+
+  .well ul li {
+    margin-bottom: 10px;
+  }
+
+  .well p {
+    margin-top: 0px !important;
+  }
+
+  .starkey {
+    font-size: 11px !important;
+  }
+
+  .glyphicon {
+    font-size: 13px !important;
+  }
+
+  .leftskills, .rightskills {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .skillstars {
+    font-size: 15px !important
+  }
+
+}
+
 @media (max-width: 605px) {
 
  .well {
@@ -493,13 +566,17 @@ div>h3 {
     padding-right: 20px;
   }
 
-  span, ul {
-    margin-right: 0px !important;
-  }
-
   .container-med {
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  #resume img {
+    top: 20%;
   }
 
 }

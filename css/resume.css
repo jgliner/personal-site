@@ -1,5 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
+}
+
+#bg {
   background:
   url(../images/pattern.png),
   url(../images/wave2.jpg) no-repeat center/cover fixed;
@@ -275,6 +278,8 @@ button:active {
   top: 15%;
   left: 50%;
   transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
 }
 
 /*--------Second Section-------*/
@@ -555,6 +560,17 @@ div>h3 {
 
   .skillstars {
     font-size: 15px !important
+  }
+
+  #bg {
+    background-color: #808080;
+    background: url(../images/pattern.png);
+  }
+
+  #bg>img {
+    position: fixed;
+    left: -121%;
+    height: 110vh;
   }
 
 }

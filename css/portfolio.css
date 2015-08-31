@@ -359,10 +359,16 @@ button:active {
   height: 1px;
   background: #fff;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
 .og-close::after {
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 
 .og-close:hover::before,
@@ -513,6 +519,9 @@ button:active {
   filter: grayscale(100%);
   display: block;
   transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -o-transform: scale(1.15);
   -webkit-transition: all ease .3s;
   -moz-transition: all ease .3s;
   -o-transition: all ease .3s;
@@ -549,6 +558,9 @@ button:active {
   z-index: 300;
   cursor: pointer;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   -webkit-transition: all ease .3s;
   -moz-transition: all ease .3s;
   -o-transition: all ease .3s;
@@ -565,6 +577,31 @@ button:active {
 /*--------RESPONSIVE-------*/
 
 @media (max-width: 768px) {
+
+  body {
+    background: none;
+    background-color: #808080;
+    overflow-x: hidden;
+  }
+
+  #bg {
+    background-color: #808080;
+    background: url(../images/pattern.png);
+  }
+
+  #bg>img {
+    position: fixed;
+    left: -121%;
+    height: 110vh;
+  }
+
+  .bgwidth {
+    width: 100%;
+  }
+
+  .bgheight {
+    height: 100%;
+  }
 
   h3 {
     font-size: 30px !important;

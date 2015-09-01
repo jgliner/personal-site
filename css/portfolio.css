@@ -651,4 +651,22 @@ button:active {
     text-align: center !important;
   }
 
+  .og-fullimg img {
+    display: inline-block;
+    max-height: initial;
+  }
+
+  #second {
+    height: initial;
+  }
+
+  .og-grid {
+    margin: -80px 0 0 0 !important;
+  }
+
+  .og-grid>li {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
 }

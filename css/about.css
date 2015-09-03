@@ -326,6 +326,7 @@ button:active {
       rgba(47, 76, 111, 0.7)),
   url(../images/sand.jpg) no-repeat center/cover;
   height: 100%;
+  padding-bottom: 75px;
 }
 
 #cali {
@@ -381,6 +382,7 @@ button:active {
       rgba(0, 0, 0, 0.4)),
   url(../images/laptop.jpg) no-repeat center/cover;
   height: 62.5%;
+  padding-bottom: 75px;
 }
 
 .triplet {
@@ -431,6 +433,7 @@ button:active {
       rgba(47, 76, 111, 0.7)),
   url(../images/grass.jpg) no-repeat center/cover;
   height: 62.5%;
+  padding-bottom: 75px;
 }
 
 #cook {
@@ -495,7 +498,8 @@ button:active {
 }
 
 .color-block:nth-child(even) {
-  color: #59708C;
+  color: #758BA4;
+  font-weight: 500;
 }
 
 /*--------RESPONSIVE-------*/
@@ -531,6 +535,7 @@ button:active {
 
   #cali {
     top: 2%;
+    margin-bottom: 75px;
   }
 
   .top-buffermd {
@@ -543,10 +548,6 @@ button:active {
 
   #fourth {
     height: 95%;
-  }
-
-  #fourth>.container>.section-header {
-    margin-top: 30px;
   }
 
   #fourth>.container>.col-xs-6:nth-child(5), #fourth>.container>.col-xs-6:nth-child(6) {
@@ -717,6 +718,10 @@ button:active {
 
   #second>.container-fluid>.section-header {
     margin-top: 20px;
+  }
+
+  #second {
+    padding-bottom: 0px;
   }
 
   #origincontainer {
@@ -934,6 +939,7 @@ button:active {
 
   #third {
     height: 170%;
+    padding-bottom: 50px;
   }
 
   #third .container .top-buffersm {
@@ -953,6 +959,7 @@ button:active {
 
   #fourth {
     height: 190%;
+    padding-bottom: 50px;
   }
 
   #fourth .container .top-buffersm {

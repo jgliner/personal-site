@@ -130,14 +130,18 @@ a, a:hover, a:focus, a:active {
 /*-----Main-----*/
 
 #triangleoverlay {
-  position: relative;
   z-index: 100;
 }
 
 #logo {
-  margin-left: 110px;
-  position: relative;
-  top: 42px;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 #title {
@@ -149,25 +153,13 @@ a, a:hover, a:focus, a:active {
 
 /*-----Links-----*/
 
-/*#triangleoverlay ul {
-  list-style-type: none;
-  position: absolute;
-  top: 440%;
+#triangleoverlay ul { /*Gets rid of left side of shape*/
   margin-left: -60px;
-}*/
+}
 
-.bmenu li a p{
-  display: inline-block;
+.bmenu li{ /*Give color+rounding to boxes*/
   border-radius: 25px;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 2px #000000;
-  color: #ffffff;
-  padding: 35px;
-  margin: 2px;
-  padding-right: 200px;
   background: rgba(27,43,64,0.7);
-  letter-spacing: 1px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -175,15 +167,44 @@ a, a:hover, a:focus, a:active {
   transition: all 0.2s linear;
 }
 
-.bmenu:hover li a p{
+.bmenu:hover li{ /*Animation to blur everything*/
   text-shadow: 0px 0px 2px #ffffff;
   color: transparent;
   background: rgba(27,43,64,0.2);
 }
 
-.bmenu li a:hover p{
+.bmenu li:hover{ /*Animation to unblur mouseover*/
   background: rgba(27,43,64,1.0);
   text-shadow: 0px 0px 0px #ffffff;
+}
+
+.bmenu li a p{ /*Creates padded box*/
+  margin-bottom: 2px;
+  padding: 35px;
+  white-space: nowrap;
+}
+
+.bmenu li a p{ /*Format text*/
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px #000000;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/*-----Link Formatting-----*/
+
+.bmenu li a p {
+  position: relative;
+  left: 25%;
+}
+
+/*-----Link Effects-----*/
+
+input:active {
+  border: none; 
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(136, 136, 136, 0.7);
 }
 
 .bmenu:hover li div input{
@@ -261,14 +282,6 @@ input:nth-child(1) {
   transition: all 0.5s linear !important;
 }
 
-input:active {
-  border: none; 
-  outline: none;
-  box-shadow: 0px 0px 10px rgba(136, 136, 136, 0.7);
-}
-
-/*-----RESPONSIVE-----*/
-
 @media (max-width: 1465px) {
 
   #title {
@@ -310,35 +323,9 @@ input:active {
   top: 440%;
   }*/
 
-  #triangleoverlay ul li a p, body {
-    overflow: hidden;
-  }
-
-  .bmenu li:nth-child(4) p {
-    padding-left: 625px;
-  }
-
-  .bmenu li:nth-child(3) p {
-    padding-left: 530px;
-  }
-
-  .bmenu li:nth-child(2) p {
-    padding-left: 415px;
-  }
-
-  .bmenu li:nth-child(1) p {
-    padding-left: 345px;
-  }
-
   #title {
-    max-height: 290px;
-    top: 25%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: static;
+    height: 290px;
   }
 
   #logo {
@@ -386,6 +373,14 @@ input:active {
     -o-transition: all 0.2s linear;
     -ms-transition: all 0.2s linear;
     transition: all 0.2s linear;
+  }
+
+}
+
+@media (min-height:1017px) {
+
+  body {
+    overflow: hidden;
   }
 
 }

@@ -670,3 +670,19 @@ button:active {
   }
 
 }
+
+@media (max-height: 850px) and (min-width: 768px) {
+
+  .og-grid {
+    display: table-cell;
+  }
+
+}
+
+@media (max-width: 768px) and (min-width: 550px) {
+
+  #bg>img {
+    height: initial;
+  }
+
+}

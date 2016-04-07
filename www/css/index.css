@@ -171,19 +171,33 @@ a, a:hover, a:focus, a:active {
 }*/
 
 .bmenu {
-  top: 90vh;
+  position: absolute;
+  top: 10vh;
+  right: 70px;
 }
 
-.bmenu li a p{
+.bmenu li a p {
+  padding: 35px;
+  padding-right: 7em;
+  padding-left: 7em;
+  margin: 2px;
+  color: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.contact {
   display: inline-block;
   border-radius: 25px;
   font-size: 20px;
   text-transform: uppercase;
   text-shadow: 0px 0px 2px #000000;
   color: #ffffff;
-  padding: 35px;
-  margin: 2px;
-  padding-right: 200px;
   background: rgba(27,43,64,0.7);
   letter-spacing: 1px;
   -webkit-transition: all 0.2s linear;
@@ -291,19 +305,18 @@ input:active {
   .underconstruction {
     top: 20%;
   }
-
 }
 
 @media (max-width: 1465px) {
 
   #title {
-    margin-top: 30% !important;
     margin-left: 55%;
     height: 40%;
   }
   .underconstruction {
     top: 120px;
   }
+
 
 }
 
@@ -322,7 +335,16 @@ input:active {
   }
 
   .underconstruction {
-    top: 25%;
+    top: 15%;
+  }
+
+  .bmenu {
+    top: 35%;
+  }
+
+  .bmenu li a p {
+    padding-right: 15em;
+    padding-left: 10em;
   }
 
 }
@@ -352,20 +374,9 @@ input:active {
     overflow: hidden;
   }
 
-  .bmenu li:nth-child(4) p {
+  .contact {
+    top: 90vh;
     padding-left: 625px;
-  }
-
-  .bmenu li:nth-child(3) p {
-    padding-left: 530px;
-  }
-
-  .bmenu li:nth-child(2) p {
-    padding-left: 415px;
-  }
-
-  .bmenu li:nth-child(1) p {
-    padding-left: 345px;
   }
 
   #title {

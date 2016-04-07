@@ -56,54 +56,54 @@ if (currentfile === "index.html" || currentfile === "index.html#") {
 
 if (currentfile === "index.html" || currentfile === "index.html#") {
 //if (currentfile === "/" || currentfile === "/#") {
-  if ($(window).width() > 768) {
+  // if ($(window).width() > 768) {
     
     //Instantiate window width and height
-    var h = $(window).height();
-    var w = $(window).width();
-    var triTop = (500/(1620/h))
-    var triBottom = (1620/(1620/h))
+    // var h = $(window).height();
+    // var w = $(window).width();
+    // var triTop = (500/(1620/h))
+    // var triBottom = (1620/(1620/h))
 
     //Calculate v-spacing of menu div   
-      if ($(window).width() < 1150) {
-        var divheight = $('.bmenu').height();
-        var offset = ( $("#title").height()-($("#logo").height()+(.1*h)) );
-        $('.bmenu').css('top',offset);
-    }
-    else {
-      var offset = (.30*h)
-      $('.bmenu').css('top', offset);
-    }
+    //   if ($(window).width() < 1150) {
+    //     var divheight = $('.bmenu').height();
+    //     var offset = ( $("#title").height()-($("#logo").height()+(.1*h)) );
+    //     $('.bmenu').css('top',offset);
+    // }
+    // else {
+    //   var offset = (.30*h)
+    //   $('.bmenu').css('top', offset);
+    // }
 
     //Calculate margins between each box
-    if ($(window).width() < 1150) {
-      var boxmargin = ( (h-(($("#title").height())+($(".bmenu").height())))/3 );
-    }
-    else {
-      var boxmargin = ( (h-(($("#logo").height()+(.25*h))+($(".bmenu").height())))/3-50 );
-    }
+    // if ($(window).width() < 1150) {
+    //   var boxmargin = ( (h-(($("#title").height())+($(".bmenu").height())))/3 );
+    // }
+    // else {
+    //   var boxmargin = ( (h-(($("#logo").height()+(.25*h))+($(".bmenu").height())))/3-50 );
+    // }
 
-    if (boxmargin < 0) {
-      boxmargin = 0
-      offset = ( $("#title").height()-($("#logo").height()+(.1*h)) );
-      $('.bmenu').css('top',offset);
-      $('#logo').css('left','500px')
-      var reducedpadding = (h/18)
-      $(".bmenu").children('li').children('a').children('p').css("padding", reducedpadding)
-    }
+    // if (boxmargin < 0) {
+    //   boxmargin = 0
+    //   offset = ( $("#title").height()-($("#logo").height()+(.1*h)) );
+    //   $('.bmenu').css('top',offset);
+    //   $('#logo').css('left','500px')
+    //   var reducedpadding = (h/18)
+    //   $(".bmenu").children('li').children('a').children('p').css("padding", reducedpadding)
+    // }
 
-    $(".bmenu").children('li').children('a').children('p').css("margin-bottom", boxmargin);
-    $("#triangleoverlay").css("overflow", "hidden");
+    // $(".bmenu").children('li').children('a').children('p').css("margin-bottom", boxmargin);
+    // $("#triangleoverlay").css("overflow", "hidden");
 
     //Calculate left positioning of container so left edge is hidden
-    var lefthide = String( boxmargin > 0 ? 60 : 55 )+"px";
-    $(".bmenu").css("right", lefthide);
+    // var lefthide = String( boxmargin > 0 ? 60 : 55 )+"px";
+    // $(".bmenu").css("right", lefthide);
 
     //Instantiate default widths
-    var fourthdefault = ($(".bmenu").children('li:nth-child(4)').width());
-    var thirddefault = ($(".bmenu").children('li:nth-child(3)').children('a').width());
-    var seconddefault = ($(".bmenu").children('li:nth-child(2)').children('a').width());
-    var firstdefault = ($(".bmenu").children('li:nth-child(1)').children('a').width());
+    // var fourthdefault = ($(".bmenu").children('li:nth-child(4)').width());
+    // var thirddefault = ($(".bmenu").children('li:nth-child(3)').children('a').width());
+    // var seconddefault = ($(".bmenu").children('li:nth-child(2)').children('a').width());
+    // var firstdefault = ($(".bmenu").children('li:nth-child(1)').children('a').width());
 
     // //Calculate box endpoints (start with max, end with 0)
     // var boxwidth4 = String( triBottom-fourthdefault-(boxmargin > 0 ? boxmargin : 0)-($(window).width() < 1150 ? 0 : 80) );
@@ -117,7 +117,7 @@ if (currentfile === "index.html" || currentfile === "index.html#") {
 
     // var boxwidth1 = String( Number(boxwidth2)-(seconddefault-firstdefault)-100 );
     // $(".bmenu").children('li:nth-child(1)').children('a').children('p').css("padding-left", boxwidth1+"px");
-  }
+  // }
 }
 
 $(window).load(function() {    
@@ -730,23 +730,23 @@ $('#contact').on('click', function() {
 
 //Social//
 
-$('.contact').on('click', function(event) {
-  if ($(window).width() > 768) {
-    event.preventDefault();
-    $('input:first-child').css('left', '35%');
-    $('input:nth-child(2)').css('left', '43%');
-    $('input:nth-child(3)').css('left', '51%');
-    $('input:nth-child(4)').css('left', '59%');
-  }
-  else {
-    event.preventDefault();
-    $('input:first-child').css({'left': '25%', 'z-index': '300', 'top':'83%'});
-    $('input:nth-child(2)').css({'left': '35%', 'z-index': '300', 'top':'83%'});
-    $('input:nth-child(3)').css({'left': '65%', 'z-index': '300', 'top':'83%'});
-    $('input:nth-child(4)').css({'left': '75%', 'z-index': '300', 'top':'83%'});
-    $(window).scrollTop(500);
-  }
-})
+// $('.contact').on('click', function(event) {
+//   if ($(window).width() > 768) {
+//     event.preventDefault();
+//     $('input:first-child').css('left', '35%');
+//     $('input:nth-child(2)').css('left', '43%');
+//     $('input:nth-child(3)').css('left', '51%');
+//     $('input:nth-child(4)').css('left', '59%');
+//   }
+//   else {
+//     event.preventDefault();
+//     $('input:first-child').css({'left': '25%', 'z-index': '300', 'top':'83%'});
+//     $('input:nth-child(2)').css({'left': '35%', 'z-index': '300', 'top':'83%'});
+//     $('input:nth-child(3)').css({'left': '65%', 'z-index': '300', 'top':'83%'});
+//     $('input:nth-child(4)').css({'left': '75%', 'z-index': '300', 'top':'83%'});
+//     $(window).scrollTop(500);
+//   }
+// })
 
 function social(url) {
   var win = window.open(url, '_blank');

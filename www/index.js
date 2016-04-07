@@ -105,18 +105,18 @@ if (currentfile === "index.html" || currentfile === "index.html#") {
     var seconddefault = ($(".bmenu").children('li:nth-child(2)').children('a').width());
     var firstdefault = ($(".bmenu").children('li:nth-child(1)').children('a').width());
 
-    //Calculate box endpoints (start with max, end with 0)
-    var boxwidth4 = String( triBottom-fourthdefault-(boxmargin > 0 ? boxmargin : 0)-($(window).width() < 1150 ? 0 : 80) );
-    $(".bmenu").children('li:nth-child(4)').children('a').children('p').css("padding-left", boxwidth4+"px");
+    // //Calculate box endpoints (start with max, end with 0)
+    // var boxwidth4 = String( triBottom-fourthdefault-(boxmargin > 0 ? boxmargin : 0)-($(window).width() < 1150 ? 0 : 80) );
+    // $(".bmenu").children('li:nth-child(4)').children('a').children('p').css("padding-left", boxwidth4+"px");
 
-    var boxwidth3 = String( Number(boxwidth4)-(fourthdefault-thirddefault)-50 );
-    $(".bmenu").children('li:nth-child(3)').children('a').children('p').css("padding-left", boxwidth3+"px");
+    // var boxwidth3 = String( Number(boxwidth4)-(fourthdefault-thirddefault)-50 );
+    // $(".bmenu").children('li:nth-child(3)').children('a').children('p').css("padding-left", boxwidth3+"px");
 
-    var boxwidth2 = String( Number(boxwidth3)-(seconddefault-thirddefault)-100 );
-    $(".bmenu").children('li:nth-child(2)').children('a').children('p').css("padding-left", boxwidth2+"px");
+    // var boxwidth2 = String( Number(boxwidth3)-(seconddefault-thirddefault)-100 );
+    // $(".bmenu").children('li:nth-child(2)').children('a').children('p').css("padding-left", boxwidth2+"px");
 
-    var boxwidth1 = String( Number(boxwidth2)-(seconddefault-firstdefault)-100 );
-    $(".bmenu").children('li:nth-child(1)').children('a').children('p').css("padding-left", boxwidth1+"px");
+    // var boxwidth1 = String( Number(boxwidth2)-(seconddefault-firstdefault)-100 );
+    // $(".bmenu").children('li:nth-child(1)').children('a').children('p').css("padding-left", boxwidth1+"px");
   }
 }
 

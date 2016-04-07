@@ -170,6 +170,10 @@ a, a:hover, a:focus, a:active {
   margin-left: -60px;
 }*/
 
+.bmenu {
+  top: 90vh;
+}
+
 .bmenu li a p{
   display: inline-block;
   border-radius: 25px;
@@ -312,8 +316,9 @@ input:active {
   }
 
   #logo {
-    margin-left: 75%;
-    margin-top: 10%;
+    position: absolute;
+    margin-left: 0;
+    left: 70%;
   }
 
   .underconstruction {

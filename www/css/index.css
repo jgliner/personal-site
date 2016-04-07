@@ -347,6 +347,14 @@ input:active {
     padding-left: 10em;
   }
 
+  .templinks {
+    top: 19vh;
+  }
+  .templinks ul li:nth-child(1) {
+    position: relative;
+    top: 27vh;
+    left: 4vw !important;
+  }
 }
 
 @media (max-width: 920px) {
@@ -359,6 +367,7 @@ input:active {
   .underconstruction {
     top: 5%;
   }
+
 
 }
 
@@ -452,3 +461,41 @@ input:active {
   }
 
 }
+
+/*APR 2016*/
+ul {
+  list-style: none;
+}
+.templinks {
+  position: absolute;
+  cursor: pointer !important;
+  z-index: 11;
+}
+.profile {
+  height: 200px;
+  width: 200px;
+}
+.templinks ul li {
+  cursor: pointer !important;
+  position: absolute;
+  background-color: rgba(27,43,64,0.7);
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+}
+.templinks ul li a, .templinks ul li {
+  color: #ffffff;
+}
+.templinks ul li:nth-child(1) {
+  position: absolute;
+  top: 27vh;
+  left: 19vw
+}
+.templinks ul li:nth-child(2) {
+  top: 57vh;
+}
+.templinks ul li:nth-child(3) {
+  top: 57vh;
+  left: 35vw
+}
+

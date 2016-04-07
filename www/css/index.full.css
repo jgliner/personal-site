@@ -147,20 +147,6 @@ a, a:hover, a:focus, a:active {
   position: absolute;
 }
 
-.underconstruction {
-  position: absolute;
-  text-align: center;
-  color: white;
-  margin-left: 55%;
-  margin-right: 5%;
-  top: 120px;
-  background-color: rgba(0,0,0,0.3);
-  padding: 20px;
-  top: 25%;
-  font-size: 20px;
-  z-index: 10;
-}
-
 /*-----Links-----*/
 
 /*#triangleoverlay ul {
@@ -283,22 +269,12 @@ input:active {
 
 /*-----RESPONSIVE-----*/
 
-@media (min-width: 1465px) {
-  .underconstruction {
-    top: 20%;
-  }
-
-}
-
 @media (max-width: 1465px) {
 
   #title {
     margin-top: 30% !important;
     margin-left: 55%;
     height: 40%;
-  }
-  .underconstruction {
-    top: 120px;
   }
 
 }
@@ -316,21 +292,12 @@ input:active {
     margin-top: 10%;
   }
 
-  .underconstruction {
-    top: 25%;
-  }
-
 }
 
 @media (max-width: 920px) {
 
   #logo {
     margin-left: 70%;
-    opacity: 0;
-  }
-
-  .underconstruction {
-    top: 5%;
   }
 
 }
@@ -376,12 +343,6 @@ input:active {
 
   #logo {
     display: none;
-  }
-
-  .underconstruction {
-    top: 0;
-    margin: 0;
-    background-color: rgba(0,0,0,0.5);
   }
 
   .mmenu {

@@ -131,7 +131,7 @@ a, a:hover, a:focus, a:active {
 
 #triangleoverlay {
   position: relative;
-  z-index: 100;
+  z-index: 0;
 }
 
 #logo {
@@ -464,7 +464,9 @@ input:active {
 
 /*APR 2016*/
 ul {
+  position: absolute;
   list-style: none;
+  z-index: 99;
 }
 .templinks {
   position: absolute;
@@ -472,8 +474,10 @@ ul {
   z-index: 11;
 }
 .profile {
+  position: relative;
   height: 200px;
   width: 200px;
+  z-index: 0;
 }
 .templinks ul li {
   cursor: pointer !important;
@@ -482,12 +486,20 @@ ul {
   padding: 15px;
   border-radius: 25px;
   text-align: center;
+  z-index: 101;
 }
-.templinks ul li a, .templinks ul li {
+.templinks ul li a {
+  position: relative;
+  color: #ffffff;
+/*  height: 100%;
+  width: 100%;*/
+  z-index: 100;
+}
+
+.templinks ul li {
   color: #ffffff;
 }
 .templinks ul li:nth-child(1) {
-  position: absolute;
   top: 27vh;
   left: 19vw
 }

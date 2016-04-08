@@ -138,10 +138,11 @@ a, a:hover, a:focus, a:active {
   margin-left: 110px;
   position: relative;
   top: 42px;
+  z-index: 102;
 }
 
 #title {
-  margin-top: 320px !important;
+  margin-top: 200px !important;
   margin-left: 45%;
   height: 60%;
   position: absolute;
@@ -154,7 +155,7 @@ a, a:hover, a:focus, a:active {
   margin-left: 55%;
   margin-right: 5%;
   top: 120px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
   padding: 20px;
   top: 25%;
   font-size: 20px;
@@ -172,14 +173,14 @@ a, a:hover, a:focus, a:active {
 
 .bmenu {
   position: absolute;
-  top: 10vh;
+  top: 64em;
   right: 70px;
 }
 
 .bmenu li a p {
   padding: 35px;
-  padding-right: 7em;
-  padding-left: 7em;
+  padding-right: 25em;
+  padding-left: 21em;
   margin: 2px;
   color: #ffffff;
   border-radius: 25px;
@@ -339,21 +340,41 @@ input:active {
   }
 
   .bmenu {
-    top: 35%;
-  }
-
-  .bmenu li a p {
-    padding-right: 15em;
-    padding-left: 10em;
+    top: 90%;
   }
 
   .templinks {
     top: 19vh;
   }
-  .templinks ul li:nth-child(1) {
+  .templinks ul li {
     position: relative;
     top: 27vh;
-    left: 4vw !important;
+    left: -1vw !important;
+  }
+  .profile {
+    position: relative;
+    height: 150px !important;
+    width: 150px !important;
+    z-index: 0;
+  }
+
+  .templinks ul li:nth-child(1) {
+    top: 13vh !important;
+    left: -1vw;
+    padding-right: 15em !important;
+    padding-left: 15em !important;
+  }
+  .templinks ul li:nth-child(2) {
+    top: 32.5vh !important;
+    left: -1vw;
+    padding-right: 20em !important;
+    padding-left: 20em !important;
+  }
+  .templinks ul li:nth-child(3) {
+    top: 52vh !important;
+    left: -1vw;
+    padding-right: 25em !important;
+    padding-left: 25em !important;
   }
 }
 
@@ -475,8 +496,8 @@ ul {
 }
 .profile {
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 10em;
+  width: 10em;
   z-index: 0;
 }
 .templinks ul li {
@@ -500,14 +521,21 @@ ul {
   color: #ffffff;
 }
 .templinks ul li:nth-child(1) {
-  top: 27vh;
-  left: 19vw
+  top: 8em;
+  left: -1vw;
+  padding-right: 12em;
+  padding-left: 12em;
 }
 .templinks ul li:nth-child(2) {
-  top: 57vh;
+  top: 27em;
+  left: -1vw;
+  padding-right: 18em;
+  padding-left: 18em;
 }
 .templinks ul li:nth-child(3) {
-  top: 57vh;
-  left: 35vw
+  top: 46em;
+  left: -1vw;
+  padding-right: 24em;
+  padding-left: 24em;
 }
 

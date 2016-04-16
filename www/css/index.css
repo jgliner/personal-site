@@ -173,7 +173,7 @@ a, a:hover, a:focus, a:active {
 
 .bmenu {
   position: absolute;
-  top: 64em;
+  top: 81vh;
   right: 70px;
 }
 
@@ -340,7 +340,7 @@ input:active {
   }
 
   .bmenu {
-    top: 90%;
+    top: 90vh;
   }
 
   .templinks {
@@ -353,8 +353,8 @@ input:active {
   }
   .profile {
     position: relative;
-    height: 150px !important;
-    width: 150px !important;
+/*    height: 150px !important;
+    width: 150px !important;*/
     z-index: 0;
   }
 
@@ -496,8 +496,8 @@ ul {
 }
 .profile {
   position: relative;
-  height: 10em;
-  width: 10em;
+  height: 10vh;
+  width: 10vh;
   z-index: 0;
 }
 .templinks ul li {
@@ -527,15 +527,15 @@ ul {
   padding-left: 12em;
 }
 .templinks ul li:nth-child(2) {
-  top: 27em;
+  top: 22em;
   left: -1vw;
-  padding-right: 18em;
-  padding-left: 18em;
+  padding-right: 16em;
+  padding-left: 16em;
 }
 .templinks ul li:nth-child(3) {
-  top: 46em;
+  top: 36em;
   left: -1vw;
-  padding-right: 24em;
-  padding-left: 24em;
+  padding-right: 20em;
+  padding-left: 20em;
 }
 

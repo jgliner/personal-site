@@ -1,0 +1,3 @@
+[submodule "safeAndSound"]
+	path = safeAndSound
+	url = git://github.com/jgliner/safeAndSound.git

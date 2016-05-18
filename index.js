@@ -1,5 +1,5 @@
-var currentfile = document.location.href.match(/[^\/]+$/)[0];
-//var currentfile = document.location["pathname"]
+// var currentfile = document.location.href.match(/[^\/]+$/)[0];
+var currentfile = document.location["pathname"]
 
 window.addEventListener("scroll", function() {
     if (window.scrollY > 100) {
@@ -19,8 +19,8 @@ window.addEventListener("scroll", function() {
 
 //Changes stylesheet if in mobile range
 
-if (currentfile === "index.html" || currentfile === "index.html#") {
-//if (currentfile === "/" || currentfile === "/#") {
+// if (currentfile === "index.html" || currentfile === "index.html#") {
+if (currentfile === "/" || currentfile === "/#") {
   if ($(window).width() < 768) {
     $("#title").addClass('text-center center-block')
     $("#title").css('position','absolute');

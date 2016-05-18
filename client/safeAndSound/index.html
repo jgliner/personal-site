@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Operation: Safe and Sound</title>
+
+    <link href="./css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  </head>
+
+  <body>
+
+    <div id="menu" class="start">
+        <img src="./images/title.png" id="menuheader">
+        <div id="menuText" class="mainMenu">
+            <h1>You have three minutes to</h1>
+            <h1>open the safe before it explodes.</h1>
+            <br>
+            <h1>Good luck, agent. Make your country proud.</h1>
+        </div>
+        <button id="startGame" class="startmenu">Get to It</button>
+        <h1 id="countdown" class="invis"></h1>
+    </div>
+
+    <div id="explode" style="display: none;">
+        <img src="./images/explosionouter.png" style="opacity: 0;" id="outer">
+        <img src="./images/explosionmiddle.png" style="opacity: 0;" id="mid">
+        <img src="./images/explosioninner.png" style="opacity: 0;" id="inner">
+    </div>
+
+    <div class="container-fluid">
+
+        <img src="./images/siren.png" id="siren">
+        <img src="./images/pipe.png" id="pipe1">
+        <img src="./images/pipe.png" id="pipe2">
+        <img src="./images/explosionsign.png" id="sign">
+
+        <h1 class="strikes">STRIKES: 0</h1>
+        <h1 class="strikebuzzer">X</h1>
+
+        <div class="safe">
+            <img src="./images/safe.png" id="safeimg">
+            <div id="topwrap">
+                <div id="mainTimerWrap">
+                    <div id="mainTimer">INACTIVE</div>
+                </div>
+                <div id="idwrap">
+                    <div id="identifiers">
+                        <u id ="bombname">COMMANDO 8&#8482; SERIES</u>
+                        <div id ="serial"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bomb">
+                <div id='mod0' class='col-xs-6 mod'>
+                    <div id='led0' class='modled'><img src='./images/led.png'></div>
+                </div>
+                <div id='mod1' class='col-xs-6 mod'>
+                    <div id='led1' class='modled'><img src='./images/led.png'></div>
+                </div>
+                <div id='mod2' class='col-xs-6 mod'>
+                    <div id='led2' class='modled'><img src='./images/led.png'></div>
+                </div>
+                <div id='mod3' class='col-xs-6 mod'>
+                    <div id='led3' class='modled'><img src='./images/led.png'></div>
+                </div>
+            </div>
+            <div id="indicator">
+                <div id="bottomLED"></div>
+                <div id="indicatorCode"></div>
+            </div>
+            <!--<div id ="edition"></div>-->
+        </div>
+
+         <div id="outletWrap">
+            <div class="outlet">
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/lib/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script>$('.ui-slider-handle').draggable();</script>
+
+</body>
+
+</html>

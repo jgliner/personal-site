@@ -1,0 +1,1503 @@
+*{
+	margin: 0;
+}
+
+/*----------- FONTS -------------*/
+
+@font-face {
+    font-family: "Digital Dream";
+    src: local(DIGITALDREAM), url('../fonts/DIGITALDREAM.ttf') format('opentype');
+}
+@font-face {
+    font-family: "CustomGlyphs";
+    src: local(glyph), url('../fonts/glyph.ttf') format('opentype');
+}
+@font-face {
+    font-family: "Pixel";
+    src: local(Minecraft), url('../fonts/Minecraft.ttf') format('opentype');
+}
+
+/*----------- GENERAL BODY -------------*/
+
+html, body {
+	height: 100%;
+	overflow: hidden !important;
+}
+
+body {
+	background: url(../images/bg.jpg) no-repeat;
+	background-color: #808080;
+	background-size: 100vw 100vh;
+	font-family: "Pixel" !important;
+	letter-spacing: 1.5px;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+button {
+	outline: none;
+	border: 3px solid #808080 !important;
+}
+button:hover {
+	cursor: pointer !important;
+}
+button:active {
+	outline: none;
+	border: 3px inset #bbbbbb !important;
+}
+
+.invis {
+	display: none;
+}
+
+/*----------- MENU -------------*/
+
+#menu {
+	height: 100vh;
+	width: 100vw;
+	background-size: 100vw 100vh;
+	position: absolute;
+	z-index: 99999999999999999;
+}
+
+/*START MENU*/
+
+#menuheader
+{
+	position: absolute;
+	left: 50%;
+	top: 33%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	width: 75vw;
+}
+
+
+#startGame {
+	position: absolute;
+	left: 50%;
+	top: 74%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	border: 5px solid white !important;
+	background: transparent !important;
+	color: white !important;
+	font-size: 3vw;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#startGame:active {
+	border: 5px solid #aaa !important;
+	color: #aaa !important;
+}
+.startmenu {
+	-webkit-animation: pop 3.6s;
+	        animation: pop 3.6s;
+}
+.gameover {
+	-webkit-animation: pop 1s;
+	        animation: pop 1s;
+}
+.gameoverwin {
+	-webkit-animation: pop 7.5s;
+	        animation: pop 7.5s;
+}
+@-webkit-keyframes pop{
+	0%{opacity: 0}
+	99%{opacity: 0}
+	100%{opacity: 1} 
+}
+@keyframes pop{
+	0%{opacity: 0}
+	99%{opacity: 0}
+	100%{opacity: 1} 
+}
+
+/*MENU TEXT ANIMATION (MAIN)*/
+
+.mainMenu {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.mainMenu h1 {
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	-webkit-animation: type 1s steps(25, end);
+	        animation: type 1s steps(25, end);
+	font-size: 3.5vw;
+}
+@-webkit-keyframes type{
+  	from {width: 0;}
+}
+@keyframes type{
+  	from {width: 0;}
+}
+.mainMenu h1:nth-child(2) {
+	-webkit-animation: type2 2s steps(33, end);
+	        animation: type2 2s steps(33, end);
+}
+.mainMenu h1:nth-child(4) {
+	-webkit-animation: type3 3.5s steps(40, end);
+	        animation: type3 3.5s steps(40, end);
+}
+@-webkit-keyframes type2{
+	0%{width: 0;}
+	50%{width: 0;}
+	100%{ width: 100; } 
+}
+@keyframes type2{
+	0%{width: 0;}
+	50%{width: 0;}
+	100%{ width: 100; } 
+}
+@-webkit-keyframes type3{
+	0%{width: 0;}
+	60%{width: 0;}
+	100%{ width: 100; } 
+}
+@keyframes type3{
+	0%{width: 0;}
+	60%{width: 0;}
+	100%{ width: 100; } 
+}
+
+@-webkit-keyframes type4{
+	0%{width: 0;}
+	70%{width: 0;}
+	100%{ width: 100; } 
+}
+
+@keyframes type4{
+	0%{width: 0;}
+	70%{width: 0;}
+	100%{ width: 100; } 
+}
+
+/*MENU TEXT ANIMATION (SUCCESS)*/
+
+.successMenu {
+	position: absolute;
+	left: 50%;
+	top: 49%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.successMenu2 {
+	position: absolute;
+	left: 50%;
+	top: 62%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+.successMenu h1 {
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	-webkit-animation: type 1s steps(15, end);
+	        animation: type 1s steps(15, end);
+	font-size: 3.5vw;
+}
+
+.successMenu h1:nth-child(2) {
+	-webkit-animation: type2 3s steps(30, end);
+	        animation: type2 3s steps(30, end);
+}
+
+.successMenu2 h1 {
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	-webkit-animation: type4 5s steps(23, end);
+	        animation: type4 5s steps(23, end);
+	font-size: 3.5vw;
+}
+
+.successMenu2 h1:nth-child(2) {
+	-webkit-animation: pop 6s;
+	        animation: pop 6s;
+}
+
+/*STATE SPECIFIC MENU ELEMENTS*/
+
+.start {
+	background: url(../images/menu.jpg) no-repeat;
+	background-color: #808080;
+}
+
+#countdown {
+	position: absolute;
+	top: 72.8%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	width: 100%;
+	font-size: 3.5vw;
+}
+
+.flash {
+	background-color: red;
+	-webkit-animation: blink 0.5s infinite;
+	        animation: blink 0.5s infinite;
+}
+
+#explode {
+	position: relative;
+	z-index: 99999999999999999;
+	height: 100vh;
+	width: 100vw;
+}
+#explode img {
+	position: absolute;
+}
+	#explode img:first-child {
+		height: 175%;
+		width: 300%;
+		right: -86%;
+		top: -27vh;
+	}
+	#explode img:nth-child(2) {
+		height: 100%;
+		width: 100%;
+		top: 5vh;
+	}
+	#explode img:last-child {
+		width: 53%;
+		height: 53%;
+		top: 40vh;
+		left: 25vw;
+	}
+
+.failure {
+	background: url(../images/failure.jpg) no-repeat;
+	background-color: red;
+}
+.success {
+	background: url(../images/success.jpg) no-repeat;
+	background-color: green;
+}
+.dooropen {
+    -webkit-transform: translate(-50%, -50%) perspective(1172px) rotateX(1deg) rotateY(19deg) rotateZ(-1.5deg) skewY(-1deg) skewX(-1deg) !important;
+            transform: translate(-50%, -50%) perspective(1172px) rotateX(1deg) rotateY(19deg) rotateZ(-1.5deg) skewY(-1deg) skewX(-1deg) !important;
+    left: 60%!important;
+    width: 58%!important;
+    height: 71%!important;
+    top: 56.5%!important;
+}
+
+
+/*STRIKE DISPLAY*/
+
+.strikes {
+	display: none;
+}
+
+.strikebuzzer {
+	color: red;
+	display: none;
+	position: absolute;
+	left: 45%;
+	font-size: 300px;
+	z-index: 9999999;
+}
+
+.blinker {
+	-webkit-animation: blink 0.5s infinite;
+	        animation: blink 0.5s infinite;
+}
+@-webkit-keyframes blink { 
+	0% { opacity: 1}
+	50% {opacity: 0}
+}
+@keyframes blink { 
+	0% { opacity: 1}
+	50% {opacity: 0}
+}
+
+/*SCENERY*/
+
+#siren, #sign, #pipe1, #pipe2 {
+	overflow: hidden;
+}
+
+#siren {
+	position: absolute;
+	top: -7vh;
+}
+#sign {
+	position: absolute;
+	left: 80vw;
+	top: 100px;
+	width: 15vw;
+}
+#pipe1 {
+	position: absolute;
+	left: 28vw;
+}
+#pipe2 {
+	position: absolute;
+	left: 45vw;
+}
+
+/*-----------SAFE SHAPE/IDENTIFIERS-------------*/
+
+/*SAFE SHAPE*/
+
+.safe {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 82vw;
+	height: auto;
+	-webkit-transform: translate(-50%, 0%);
+	        transform: translate(-50%, 0%);
+}
+#safeimg {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.bomb {
+	position: absolute;
+	left: 50.5%;
+	top: 52.6%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	width: 80%;
+	height: 69%;
+	z-index: 99999999999;
+}
+
+/*SAFE COMPONENTS*/
+
+#topwrap {
+	position: absolute;
+	width: 79.5%;
+	height: 10%;
+	top: 4.7%;
+	left: 8%;
+	-webkit-transform: skewX(17deg);
+	        transform: skewX(17deg);
+}
+
+#idwrap {
+	position: relative;
+	background: url(../images/indicatorPlaque2.png) no-repeat center/100% 100%;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+#mainTimerWrap {
+	position: relative;
+	background: url(../images/indicatorPlaque2.png) no-repeat center/100% 100%;
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+#mainTimer {
+	position: relative;
+	font-size: 3.5vw;
+	width: 80%;
+	height: 66%;
+	left: 10%;
+	top: 45%;
+	background-color: black;
+	color: red;
+	-webkit-transform: translate(0%, -50%);
+	        transform: translate(0%, -50%);
+	text-align: center;
+}
+.defusedTimer {
+	color: green !important;
+}
+#identifiers {
+	position: relative;
+	top: 6%;
+	font-size: 1.9vw;
+	-webkit-transform: skewX(-15deg);
+	        transform: skewX(-15deg);
+}
+#bombname {
+	font-weight: bold;
+	color: #505050;
+}
+
+#edition {
+
+}
+
+/*MODULES (GENERAL)*/
+
+#mod0 {
+	position: relative;
+	height: 47%;
+	width: 47.5%;
+}
+#mod1 {
+	position: relative;
+	height: 47%;
+	width: 48.5%;
+	left: 2.35vw;
+}
+#mod2 {
+	position: relative;
+	height: 47%;
+	width: 47.5%;
+	top: 2.3vh;
+}
+#mod3 {
+	position: relative;
+	height: 47%;
+	width: 48.5%;
+	left: 2.35vw;
+	top: 2.3vh;
+}
+
+.mod {
+	height: 50%;
+	width: 50%;
+	padding: 0 !important;
+}
+
+#mod1.moddooropen {
+	left: 5.5vw !important;
+	top: -1vw !important;
+}
+#mod3.moddooropen {
+	left: 5.7vw !important;
+	top: 2.6vh !important;
+}
+
+/*MODULE LEDS*/
+
+.modled {
+	position: absolute;
+	top: 0.5vh;
+	left: 0.5vw;
+}
+.modled img {
+	width: 3vw;
+}
+
+.correct:after {
+    content: '';
+    position: absolute;
+    height: 87.5%;
+    width: 73%;
+    background-color: #19A719;
+    border-top-left-radius: 82%;
+    border-top-right-radius: 82%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    left: 15%;
+    opacity: 0.7;
+    border: 3px solid #158915;
+    border-bottom: 3px solid grey;
+    top: 0.07vh;
+    box-shadow: 0px -2px 10px green;
+}
+
+/*THREE LETTER INDICATOR*/
+
+#indicator {
+	background: url(../images/indicatorPlaque.png) no-repeat center/contain;
+	width: 15%;
+	height: 5%;
+	position: absolute;
+	top: 49%;
+	left: -1.9%;
+	text-align: center;
+	-webkit-transform: rotate(270deg) skewX(-20deg);
+	        transform: rotate(270deg) skewX(-20deg);
+	display: inline-block;
+}
+#bottomLED {
+	position: relative;
+	border: 1px solid #C70303;
+	background-color: red;
+	border-radius: 50%;
+	top: 30%;
+	left: 20%;
+	padding: 0;
+	float: left;
+	height: 1.2vw;
+	width: 1.2vw;
+}
+#indicatorCode {
+	position: relative;
+	left: 25%;
+	top: 20%;
+	font-size: 1.8vw;
+	float: left;
+}
+
+/*-----------OUTLET-------------*/
+
+#outletWrap {
+	position: absolute;
+	height: 12.5vw;
+	width: 7.5vw;
+	background: url(../images/button.png) no-repeat center/cover;
+	border: 4px solid #808080;
+	left: 80vw;
+	top: 80%;
+}
+
+/*-----------OUTLET TYPES-------------*/
+
+.outlet {
+	position: relative;
+    left: 4%;
+    top: 18%;
+    width: 90%;
+    height: 65%;
+}
+
+#usa {
+    background: url(../images/outlets/us.png) no-repeat center/contain;
+}
+#uk {
+    background: url(../images/outlets/uk.png) no-repeat center/contain;
+}
+#ger {
+    background: url(../images/outlets/ger.png) no-repeat center/contain;
+}
+#ind {
+    background: url(../images/outlets/ind.png) no-repeat center/contain;
+}
+#aus {
+    background: url(../images/outlets/aus.png) no-repeat center/contain;
+}
+#isr {
+    background: url(../images/outlets/isr.png) no-repeat center/contain;
+}
+
+
+/*----------- MODULES -------------*/
+
+/*KEYPAD*/
+
+.comfirm:focus {
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+.keypad {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.kbutton {
+	height: 28%;
+	width: 25%;
+	font-family: "CustomGlyphs" !important;
+	position: absolute;
+	text-align: center;
+	font-size: 3vw;
+	background: url(../images/button.png) no-repeat center/100% 100%;
+	white-space: normal;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	padding: 0;
+}
+
+#button0 {
+	left: 30%;
+	top: 30%;
+}
+#button1 {
+	left: 72%;
+	top: 30%;
+}
+#button2 {
+	left: 30%;
+	top: 70%;
+}
+#button3 {
+	left: 72%;
+	top: 70%;
+}
+
+.correctKeypad:before {
+	content: '';
+    background-color: #00ff00;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+/*COMPLEX WIRES*/
+
+.wires {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.wireWrap {
+	position: relative;
+	height: 71%;
+	width: 80%;
+	left: 10%;
+	top: 1.5vh;
+}
+
+.wireDocks, .simpleWireDocks {
+	position: absolute;
+}
+.confirm {
+	width: 2.5vw;
+	height: 2.5vw;
+	background: url(../images/button.png) no-repeat center/cover;
+	left: 99%;
+	top: 16.5%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	z-index: 99999999
+
+}
+.confirm:before {
+	content: '';
+    background-color: red;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+.dock0 {
+	height: 100%;
+	width: 2%;
+	left: 10%;
+	top: 20%;
+	background-color: #606060;
+}
+.delta {
+	height: 100%;
+	width: 15%;
+	left: -5%;
+	top: 20%;
+	background: url(../images/button.png) no-repeat center/cover;
+	border: 5px dashed #909090;
+}
+.dock1 {
+	height: 100%;
+	width: 2%;
+	left: 90%;
+	top: 20%;
+	background-color: #606060;
+}
+.led {
+	height: 100%;
+	width: 15%;
+	left: 92%;
+	top: 20%;
+	background: url(../images/button.png) no-repeat center/cover;
+	border: 5px dashed #909090;
+}
+
+.indivWireCont {
+	position: absolute;
+	height: 87%;
+	width: 80%;
+	top: 29%;
+	left: 11%;
+}
+.indivWires {
+	position: absolute;
+	height: 10px;
+	width: 100%;
+	z-index: 1000;
+	border: none !important;
+	padding: 0;
+	line-height: 2px;
+}
+.indivWires:active {
+	border: none !important;
+}
+.wireSpacing {
+	width: 100%;
+	height: 17%;
+	position: relative;
+}
+
+.deltaOnOff {
+	position: absolute;
+	width: 20%;
+	height: 100%;
+	left: -20%;
+	top: 53%;
+	font-size: 125%;
+}
+.ledOnOff {
+	position: relative;
+	left: 60.5%;
+	display: inline-block;
+	border: 1px solid #C70303;
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	top: -1%;
+}
+
+.deltaOn .deltaOnOff {
+	color: #fff;
+}
+.deltaOff .deltaOnOff {
+	display: none;
+}
+.ledOn .ledOnOff {
+	background-color: #FF0000;
+}
+.ledOff .ledOnOff {
+	background-color: #8B0101;
+}
+
+.cut:after {
+	position: absolute;
+	content: "||||||||||||||||||||||||||||||||";
+	letter-spacing: -2px;
+	left: 50%;
+	top: 0.5vh;
+	color: #BDBDBD;
+	-webkit-transform: translate(-50%,0%);
+	        transform: translate(-50%,0%);
+}
+
+/*SIMPLE WIRES*/
+
+.simpleWireWrap {
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	bottom: 15%;
+
+}
+
+.indivWireContS {
+	position: absolute;
+	height: 74%;
+	width: 100%;
+	top: 27%;
+	text-align: center;
+}
+.indivWiresS {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 8px;
+	z-index: 1000;
+	border: none !important;
+	padding: 0;
+	line-height: 2px;
+	margin-right: 10%;
+	margin-left: auto;
+}
+.indivWiresS:hover {
+	border: none !important;
+}
+.indivWiresS:last-child {
+	margin-right: 0%;
+}
+.indivWiresS:before, .indivWiresS:after {
+	content: '';
+	height: 7px;
+	width: 20px;
+	background: url(../images/indicatorPlaque.png) no-repeat center/cover;
+	position: absolute;
+	bottom: 100%;
+	right: -6px;
+}
+.indivWiresS:after {
+	bottom: 0;
+	top: 100%;
+}
+.cutS:after {
+	position: absolute;
+	content: "||||||||||||||||||||||||||||||||";
+	letter-spacing: -2px;
+	left: 50%;
+	top: 50%;
+	color: #BDBDBD;
+	-webkit-transform: translate(-50%,0%) rotate(90deg);
+	        transform: translate(-50%,0%) rotate(90deg);
+}
+
+/*PANIC MODULE*/
+
+.panic {
+	height: 100%;
+	width: 100%;
+}
+
+.panicModule {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.panicOff:after {
+  	content: '';
+    position: absolute;
+    height: 87.5%;
+    width: 73%;
+    border-top-left-radius: 82%;
+    border-top-right-radius: 82%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    left: 15%;
+    opacity: 0.7;
+    border-bottom: 3px solid grey;
+    top: 0.07vh;
+    -webkit-animation: panicOff 2s infinite;
+    animation: panicOff 2s infinite;
+}
+
+@-webkit-keyframes panicOff { 
+	0% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+	50% { background-color: #19A719; box-shadow: 0px -2px 10px green; border: 3px solid #158915;}
+	100% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+}
+
+@keyframes panicOff { 
+	0% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+	50% { background-color: #19A719; box-shadow: 0px -2px 10px green; border: 3px solid #158915;}
+	100% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+}
+
+.on:after {
+	content: '';
+    position: absolute;
+    height: 87.5%;
+    width: 73%;
+    border-top-left-radius: 82%;
+    border-top-right-radius: 82%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    left: 15%;
+    opacity: 0.7;
+    border-bottom: 3px solid grey;
+    top: 0.07vh;
+    -webkit-animation: on 0.3s infinite;
+    animation: on 0.3s infinite;
+}
+
+@-webkit-keyframes on { 
+	0% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+	50% { background-color: red; box-shadow: 0px -2px 10px red; border: 3px solid #E00000;}
+	100% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+}
+
+@keyframes on { 
+	0% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+	50% { background-color: red; box-shadow: 0px -2px 10px red; border: 3px solid #E00000;}
+	100% { background-color: transparent; box-shadow: 0px 0px 0px grey; border: 3px solid transparent; }
+}
+
+.panicTimerBox {
+	position: absolute;
+	top: 5%;
+	left: 12%;
+	height: 25%;
+	width: 17%;
+	background-color: black;
+	text-align: center;
+}
+.panicTimer {
+	position: relative;
+	text-align: center;
+	top: 20%;
+	color: red;
+	font-size: 3vw;
+}
+.panicBar {
+	position: absolute;
+	top: 11%;
+	left: 29%;
+	width: 61%;
+	height: 15%;
+	background-color: #D21414;
+	border: 3px solid #EB0808;
+}
+.buttontimer {
+	position: absolute;
+	width: 12%;
+	height: 15%;
+	background: url(../images/button.png) no-repeat center/cover;
+	text-align: center !important;
+	top: 81%;
+	left: 55%;
+}
+.buttontimer:before {
+	content: '';
+    background-color: red;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+.commandBox {
+	position: absolute;
+	background-color: black;
+	width: 82%;
+	height: 30%;
+	top: 35%;
+	left: 10%;
+}
+
+.commandText {
+	position: absolute;
+	width: 90%;
+	height: 88%;
+	text-align: center;
+	top: 10%;
+	left: 5%;
+	color: red;
+	font-size: 2.15vw;
+	text-transform: uppercase;
+}
+
+.ui-slider {
+	position: absolute !important;
+	width: 82%;
+	height: 20%;
+	top: 70%;
+	left: 10%;
+	background: black !important;
+	color: black !important;
+	border: none !important;
+}
+.ui-widget-header {
+	background: #444 !important;
+}
+.ui-slider-handle {
+	background: url(../images/button.png) no-repeat center/100% 100% !important;
+	border: 3px solid #6F6F6F !important;
+	outline: none !important;
+}
+.ui-slider-handle:active {
+	border: 3px groove #6F6F6F !important;
+}
+
+
+.val {
+	position: absolute;
+	width: 12% !important;
+	height: 15%;
+	color: red;
+	background: black;
+	border: none;
+	text-align: center !important;
+	vertical-align: middle;
+	top: 81%;
+	left: 35%;
+	font-size: 2.4vw;
+}
+
+/*LAUNCHPAD MODULE*/
+
+.launchpad {
+	position: absolute;
+	height: 77%;
+	width: 77%;
+	left: 12%;
+	top: 12%;
+}
+
+.lbutton, .lbuttonOn {
+	height: 25%;
+	position: relative;
+	background: url(../images/button.png) no-repeat center/100% 100%;
+ transition: all 0.2s linear;
+    border: 3px outset buttonface !important;
+}
+
+.blink:before {
+	content: '';
+	-webkit-animation: pulse 0.5s infinite;
+	        animation: pulse 0.5s infinite;
+}
+
+@-webkit-keyframes pulse { 
+	50% { background-color: grey; }
+}
+
+@keyframes pulse { 
+	50% { background-color: grey; }
+}
+
+.R:before {
+    content: '';
+    background-color: red;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    transition: all 0.2s linear;
+}
+.B:before {
+	content: '';
+    background-color: blue;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    transition: all 0.2s linear;
+}
+.Y:before {
+	content: '';
+    background-color: yellow;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+}
+.G:before {
+	content: '';
+    background-color: #00ff00;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    transition: all 0.2s linear;
+}
+.W:before {
+	content: '';
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+    transition: all 0.2s linear;
+}
+.W {
+	-webkit-filter: brightness(1.5);
+  	filter: brightness(1.5);
+   transition: all 0.2s linear;
+}
+
+/*----------- RESPONSIVE (PORTRAIT) -------------*/
+
+@media (orientation: portrait) {
+
+	/* Menu */
+	#startGame {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	/*SCENERY*/
+
+	#pipe1 {
+		position: absolute;
+		left: 28vw;
+		width: 31vw;
+	}
+	#pipe2 {
+		position: absolute;
+		left: 45vw;
+		width: 31vw;
+	}
+
+	/* Remove scenery to make room for the safe */
+
+	#siren {
+		display: none;
+	}
+	#sign {
+		display: none;
+	}
+
+	/* Adjust the safe to take up the full width */
+	.container-fluid {
+		position: absolute;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.safe {
+		position: absolute;
+		left: 52.7%;
+		bottom: 0;
+		width: 109vw;
+		height: 91vh;
+		-webkit-transform: translate(-50%, 0%);
+		        transform: translate(-50%, 0%);
+		max-height: 800px;
+		max-width: 910px;
+		overflow: hidden;
+	}
+	#safeimg {
+		overflow: hidden;
+	}
+
+	/* Outlet on top*/
+	#outletWrap {
+	    position: absolute;
+		left: 21vw;
+		top: 0.5vh;
+    	height: 17.5vw;
+    	width: 9.5vw;
+	    -webkit-transform: rotate(90deg);
+	            transform: rotate(90deg);
+	}
+
+	/* Adjust identifier text size */
+	#identifiers {
+	    top: 1vh;
+	    left: -1vw;
+	    font-size: 2.6vw;
+	    height: 100%;
+	    width: 100%;
+	}
+
+	#mainTimer {
+		font-size: 4.6vw;
+		line-height: 9vw;
+	}
+
+	#indicatorCode {
+		font-size: 3vw;
+		left: 25%;
+		top: 17%;
+		line-height: 3.5vh;
+	}
+
+	/*MODULES (general)*/
+
+	#mod2, #mod3 {
+		top: 3.5vh;
+	}
+	#mod1, #mod3 {
+		left: 3.35vw;
+	}
+
+	/*MODULES (specific)*/
+
+	/*keypad*/
+	.kbutton {
+		font-size: 4vh;
+	}
+
+	/*complex wires*/
+	.confirm {
+		height: 15%;
+	}
+
+	/*panic*/
+	.commandText {
+		font-size: 3vw;
+		top: 1vh;
+	}
+
+	/*launchpad*/
+	.lbutton, .lbuttonOn {
+		padding: 0 !important;
+	}
+
+	#explode {
+		position: absolute;
+	}
+
+}
+
+@media (orientation: portrait) and (max-width: 455px) {
+
+	/* Adjust parent components for mobile Safari */
+	_::-webkit-:not(:root:root),.safe {
+		height: 81vh;
+	}
+
+	_::-webkit-:not(:root:root),#menuheader {
+		top: 23%;
+	}
+	_::-webkit-:not(:root:root),#menuText {
+		top: 45%;
+	}
+	_::-webkit-:not(:root:root),#startGame {
+		top: 64%;
+	}
+	_::-webkit-:not(:root:root),#countdown {
+		top: 61%;
+	}
+
+	/* Adjust identifier text size for phones */
+	#identifiers {
+		top: 1vh;
+		line-height: 3vh;
+		font-size: 2.5vw;
+	}
+	#serial {
+		font-size: 3.5vw;
+	}
+	#mainTimer {
+		font-size: 5.6vw;
+		line-height: 10vw;
+	}
+
+	/* Adjust correct module light size (pseudoselector) */
+	.correct:after {
+		height: 3vw;
+		width: 73%;
+		top: 0.4vh;
+	}
+
+}
+
+@media (max-width: 455px) and (device-aspect-ratio: 2/3), (device-aspect-ratio: 9/16), (device-aspect-ratio: 375/667)  {
+
+	/* Outlet on top*/
+	#outletWrap {
+		left: 21vw;
+		top: 0.5vh;
+    	height: 17.5vw;
+    	width: 9.5vw;
+	}
+
+	.defusedTimer {
+		font-size: 4.6vw !important;
+	}
+
+	/*MODULES (specific)*/
+
+	/*keypad*/
+	.kbutton {
+		font-size: 3vh;
+		width: 32%
+	}
+
+	/*complex wires*/
+	.confirm {
+		width: 5vw;
+		height: 5.5vw;
+		top: 17.5%;
+		margin: 0;
+		padding: 0;
+	}
+
+	/*panic*/
+	.panicTimerBox {
+		top: 12%;
+		height: 17%;
+		width: 17%;
+		font-size: 4vw;
+	}
+	.panicBar {
+		top: 13%;
+	}
+	.commandText {
+		font-size: 3.5vw;
+		top: 0.5vh;
+	}
+	.buttontimer {
+		width: 15%;
+	}
+	.val {
+		font-size: 3.5vw;
+    	line-height: 4.2vh;
+		width: 15% !important;
+	}
+
+	/*launchpad*/
+	.launchpad {
+	    position: absolute;
+	    height: 77%;
+	    width: 89%;
+	    left: 6%;
+	    top: 12%;
+	}
+
+
+
+}
+
+/*----------- RESPONSIVE (LANDSCAPE) -------------*/
+
+@media (orientation: landscape) {
+
+	/*SCENERY*/
+
+	#siren {
+		position: absolute;
+		top: -19vh;
+		width: 36vh;
+	}
+	#sign {
+		position: absolute;
+		left: 82vw;
+		top: 6vh;
+		width: 18vh;
+	}
+	#pipe1 {
+		position: absolute;
+		left: 29vw;
+		width: 36vh;
+	}
+	#pipe2 {
+		position: absolute;
+		left: 51vw;
+		width: 36vh;
+	}
+
+	#explode {
+		position: absolute;
+	}
+
+	/*MENU*/
+
+	#menuheader {
+		top: 20%;
+		width: 75vh;
+	}
+	.mainMenu {
+	    top: 52%;
+	}
+	.mainMenu h1 {
+		font-size: 4vh;
+	}
+	.successMenu {
+		top: 45% !important;
+	}
+	.successMenu2 {
+		top: 62%;
+	}
+	#startGame {
+		top: 80%;
+		font-size: 4vh;
+	}
+	#countdown {
+		top: 78.5%;
+		font-size: 4vh;
+	}
+
+	/*MODULES (general)*/
+
+	.safe {
+		position: absolute;
+		left: 52.7%;
+		bottom: 0;
+		width: 93vh;
+		height: inherit;
+		-webkit-transform: translate(-50%, 0%);
+		        transform: translate(-50%, 0%);
+	}
+
+	.mod {
+		top: 0.5vh;
+	}
+	#mod2, #mod3 {
+		top: 3vh;
+	}
+	#mod1, #mod3 {
+		left: 1.7vw;
+	}
+
+	/*Adjust outlet position*/
+	#outletWrap {
+		position: absolute;
+		height: 12.5vh;
+		width: 7.5vh;
+		left: 3vh;
+		top: 86vh;
+	}
+
+	/* Adjust LED size */
+	.modled img {
+		width: 3vh;
+	}
+
+	/* Adjust identifier text size */
+	#identifiers {
+	    top: 0.5vh;
+	    left: 0vw;
+	    font-size: 2.2vh;
+	    height: 100%;
+	    width: 100%;
+	}
+
+	#mainTimer {
+		font-size: 4vh;
+		line-height: 6vh;
+	}
+
+	#indicatorCode {
+		font-size: 2.5vh;
+		left: 25%;
+		top: 17%;
+		line-height: 3vh;
+	}
+
+	#bottomLED {
+		width: 2.2vh;
+	}
+
+	/*MODULES (specific)*/
+
+	/*keypad*/
+	.kbutton {
+		font-size: 3.5vh;
+		width: 32%
+	}
+
+	/*panic*/
+	.panicTimerBox {
+		top: 8%;
+		height: 24%;
+		width: 17%;
+	}
+	.panicTimer {
+		font-size: 2.2vh;
+	}
+	.panicBar {
+		top: 13%;
+	}
+	.commandText {
+		font-size: 3vh;
+		top: 0vh;
+	}
+	.buttontimer {
+		width: 10%;
+	}
+	.val {
+		font-size: 3vh;
+		width: 10% !important;
+	}
+
+	/*launchpad*/
+	.lbutton {
+		padding: 0 !important;
+	}
+
+
+}

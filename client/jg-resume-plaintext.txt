@@ -1,0 +1,63 @@
+JARRETT GLINER
+jarrett.gliner@gmail.com
+(858) 882-­7322
+San Francisco, CA
+
+GitHub: github.com/jgliner
+LinkedIn: linkedin.com/in/jgliner
+Personal Site: jarrett.io
+---------------------------------------
+Technical Skills:
+
+Strong: Javascript+ES6, jQuery, CSS, NodeJS, Express, MongoDB, Angular, ReactJS, RegEx, Git, BootStrap, Socket.io
+Experienced: mySQL, D3, Python, AppleScript, Linux, Grunt, Mocha Test Suite, AWS EC2
+---------------------------------------
+Engineering Projects:
+
+OpenDoor | Software Engineer/Scrum Master
+__Schedule for the present, see which of your friends are free__
+● Architected codebase from the ground up in an isomorphic JavaScript environment
+● Created a fully native iOS app using React Native alongside Redux to manage a frequently­-changing global state
+● Implemented dynamic friend request system using Postgres, Sequelize ORM, a custom RESTful API, and JWT
+● Deployed to a stable AWS EC2 server using a Docker Container to house and further secure Postgres instance
+
+Bolt | Software Engineer/Scrum Master
+ __Chart new running routes and race live against friends__
+● Overhauled NodeJS + Express backend using MongoDB and Mongoose ODM schema to integrate Facebook OAuth alongside native login system
+● Improved Angular frontend with custom D3 directive for responsive data visualization
+
+LunchTrain | Software Engineer/Scrum Master
+__Organize social activities with colleagues via Slack__
+● Constructed sqlite3 database with Sequelize ORM to guarantee data uniformity
+● Developed and tested NodeJS + Express backend with custom RESTful API
+● Designed stateful ReactJS frontend and augmented with Google Maps and Places APIs
+● Deployed to DigitalOcean VPS with SSL encryption that intercepts and redirects all requests to HTTPS
+
+Pocket Bonanza | Software Engineer/Product Owner
+__A competitive internet scavenger hunt__
+● Leveraged Socket.io for simplified realtime communication between players
+● Utilized MEAN stack due to application's demand for a rapidly­-changing DOM
+
+Other Projects | Software Engineer
+● Operation “Safe and Sound”: A cooperative game where two players work together to open a cryptic safe with
+procedurally generated modules. Made in vanilla JS and jQuery, features original pixel art.
+---------------------------------------
+Professional Experience:
+
+Graphiq | Associate Product Manager
+Santa Barbara, CA | January 2014 - July 2015
+● Managed and grew specout.com, a flagship product,from 640k to 1.5m monthly sessions (130%) while improving engagement metrics (e.g. Time on Page, Bounce Rate) by 10%
+● Maintained a persistent database of 25 tables and ~150,000 rows using MySQL and ETL methods
+● Employed SEO strategies to achieve and maintain first page rankings on Google SERP
+---------------------------------------
+Education:
+
+Hack Reactor | Advanced Software Engineering Immersive Program (2016)
+
+University of California, Santa Barbara | B.A. in Psychology and Applied Psychology (2010 - 2014)
+● Relevant Coursework: Intro to Computer Science, Technology Management Program
+---------------------------------------
+Personal:
+● Music Maker - Been playing guitar since age 14 and enjoy technical music production as a hobby
+● Photoshop Guru  - Will gladly participate in Photoshop battles
+● Second­ Degree Black Belt and former Martial Arts Instructor

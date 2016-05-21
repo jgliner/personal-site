@@ -77,26 +77,26 @@ a, a:hover, a:focus, a:active {
 
 @-webkit-keyframes spin {
     0%   {
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 @keyframes spin {
     0%   {
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -521,21 +521,34 @@ ul {
   color: #ffffff;
 }
 .templinks ul li:nth-child(1) {
-  top: 8em;
+  top: 9rem;
   left: -1vw;
   padding-right: 12em;
   padding-left: 12em;
 }
 .templinks ul li:nth-child(2) {
-  top: 22em;
+  top: 27rem;
   left: -1vw;
   padding-right: 16em;
   padding-left: 16em;
 }
 .templinks ul li:nth-child(3) {
-  top: 36em;
+  top: 45rem;
   left: -1vw;
   padding-right: 20em;
   padding-left: 20em;
+}
+.templinks ul li:nth-child(4) {
+  top: 63rem;
+  left: -1vw;
+  padding-right: 24em;
+  padding-left: 24em;
+}
+
+.templinks ul li:nth-child(5) {
+  top: 81rem;
+  left: -1vw;
+  padding-right: 28em;
+  padding-left: 28em;
 }
 

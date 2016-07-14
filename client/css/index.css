@@ -24,9 +24,14 @@ ul {
 }
 .profile {
   position: relative;
-  height: 10vh;
-  width: 10vh;
+  height: 8vh;
+  width: 8vh;
   z-index: 0;
+}
+
+.templinks ul {
+  height: 100%;
+  margin-top: -1vh;
 }
 .templinks ul li {
   cursor: pointer !important;
@@ -49,32 +54,32 @@ ul {
   color: #ffffff;
 }
 .templinks ul li:nth-child(1) {
-  top: 9rem;
+  top: 5vh;
   left: -1vw;
   padding-right: 12em;
   padding-left: 12em;
 }
 .templinks ul li:nth-child(2) {
-  top: 27rem;
+  top: 23vh;
   left: -1vw;
   padding-right: 16em;
   padding-left: 16em;
 }
 .templinks ul li:nth-child(3) {
-  top: 45rem;
+  top: 41vh;
   left: -1vw;
   padding-right: 20em;
   padding-left: 20em;
 }
 .templinks ul li:nth-child(4) {
-  top: 63rem;
+  top: 59vh;
   left: -1vw;
   padding-right: 24em;
   padding-left: 24em;
 }
 
 .templinks ul li:nth-child(5) {
-  top: 81rem;
+  top: 77vh;
   left: -1vw;
   padding-right: 28em;
   padding-left: 28em;
